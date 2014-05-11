@@ -1,16 +1,18 @@
 #!/usr/bin/env ruby
 
 fib_sum = 0
-fib_n = 1
-fib_n_plus_one = 2
-fib_n_plus_two = 0
+fib_n_minus_two = 1
+fib_n_minus_one = 1
+fib_n = 0
 
-puts fib_n
-puts fib_n_plus_one
-
-until fib_n_plus_two > 40_000_000
-  fib_n_plus_two = fib_n + fib_n_plus_one
-  fib_n = fib_n_plus_one
-  fib_n_plus_one = fib_n_plus_two
-  puts fib_n_plus_two
+until fib_n > 4_000_000
+  fib_n = fib_n_minus_one + fib_n_minus_two
+  fib_n_minus_two = fib_n_minus_one
+  fib_n_minus_one = fib_n
+  if fib_n_minus_two % 2 == 0
+    # print "#{fib_n_minus_two} "
+    fib_sum += fib_n_minus_two
+  end
 end
+
+puts " = #{fib_sum}"
