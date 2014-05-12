@@ -7,25 +7,19 @@ def findBiggestPrimeFactor (number)
     return 1
   end
 
-  puts "Prime factors of #{number} are: "
-
-  prime_factors = []
-
   2.upto(number) do |x|
     if number % x == 0
       if x > biggest_prime_factor
         biggest_prime_factor = x
       end
       puts "#{x}, where #{number} / #{x} is now #{number/x}"
-      prime_factors.push(x)
-      if number / x == 1
-        return 1
+      if number == x
+        break
       else
         number = number / x
       end
     end
   end
-
   puts "Biggest prime factor = #{biggest_prime_factor}"
 end
 
