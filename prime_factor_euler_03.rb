@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 
 def findBiggestPrimeFactor (number)
+  number_to_be_factored = number
   biggest_prime_factor = 1
+
+  puts
 
   if number == 1
     return 1
@@ -20,7 +23,8 @@ def findBiggestPrimeFactor (number)
       end
     end
   end
-  puts "Biggest prime factor = #{biggest_prime_factor}"
+  puts
+  puts "Biggest prime factor of #{number_to_be_factored} = #{biggest_prime_factor}"
 end
 
 # factor_this = 13195
