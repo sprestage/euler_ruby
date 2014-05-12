@@ -1,4 +1,5 @@
 ##Euler solutions in Ruby
+These are Ruby programs that solve the math problems from http://projecteuler.net/problems.
 
 
 <br>
