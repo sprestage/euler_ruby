@@ -46,3 +46,16 @@ real  0m8.784s
 user  0m5.227s
 sys 0m0.058s
 </pre>
+
+
+####5. Smallest multiple
+I had trouble with this one taking WAY to long until I threw everything into a hash.  My first solution took over two minutes to run.
+
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./smallest_multiple_euler_05.rb
+232792560
+
+real  0m0.483s
+user  0m0.044s
+sys 0m0.020s
+</pre>
