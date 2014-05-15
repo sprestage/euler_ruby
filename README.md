@@ -60,8 +60,19 @@ user  0m0.044s
 sys 0m0.020s
 </pre>
 
-
 ####7. 10001st prime
+The much more efficient solution uses the Sieve of Eratosthenes (ca 240 BC), which works for smaller primes (all those less than 10,000,000,000).  Thank you Univ of Tenn at Martin for providing a good page on understanding and finding primes.  http://primes.utm.edu/prove/merged.html
+
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./10001st_prime_euler_07.rb
+
+The 10001st prime number is 104743
+
+real  0m3.323s
+user  0m0.539s
+sys 0m0.065s
+</pre>
+
 The first solution takes about 5-6 minutes.  Optimization is needed, such as a non-iterative way of checking for primes.  Time to learn more math.
 <pre>
 susanmaclaptop:euler_ruby susan$ time ./10001st_prime_euler_07.rb
@@ -71,4 +82,5 @@ real  5m32.597s
 user  1m2.179s
 sys 0m0.761s
 </pre>
+
 
