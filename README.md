@@ -98,3 +98,18 @@ sys 0m0.761s
 </pre>
 
 
+
+####8. Largest product in a series
+
+This was also very straightforward.
+
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./largest_product_in_series_euler_08.rb
+
+highest_product = 40824
+
+real  0m0.119s
+user  0m0.043s
+sys 0m0.014s
+</pre>
+
