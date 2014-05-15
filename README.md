@@ -59,3 +59,16 @@ real  0m0.483s
 user  0m0.044s
 sys 0m0.020s
 </pre>
+
+
+####7. 10001st prime
+The first solution takes about 5-6 minutes.  Optimization is needed, such as a non-iterative way of checking for primes.  Time to learn more math.
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./10001st_prime_euler_07.rb
+#10001 prime = 104743
+
+real  5m32.597s
+user  1m2.179s
+sys 0m0.761s
+</pre>
+
