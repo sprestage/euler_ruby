@@ -60,6 +60,20 @@ user  0m0.044s
 sys 0m0.020s
 </pre>
 
+
+####6. Sum square difference
+That was VERY easy.
+
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./sum_square_difference_euler_06.rb
+difference = 25164150
+
+real  0m0.571s
+user  0m0.049s
+sys 0m0.019s
+</pre>
+
+
 ####7. 10001st prime
 The much more efficient solution uses the Sieve of Eratosthenes (ca 240 BC), which works for smaller primes (all those less than 10,000,000,000).  Thank you Univ of Tenn at Martin for providing a good page on understanding and finding primes.  http://primes.utm.edu/prove/merged.html
 
