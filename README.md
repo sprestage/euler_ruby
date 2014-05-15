@@ -98,7 +98,6 @@ sys 0m0.761s
 </pre>
 
 
-
 ####8. Largest product in a series
 
 This was also very straightforward.

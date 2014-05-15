@@ -4,7 +4,6 @@ series = "7316717653133062491922511967442657474235534919493496983520312774506326
 length = series.length
 highest_product = 0
 
-puts
 array_of_numbers = series.split("").map { |s| s.to_i }
 
 4.upto(length-1) do |x|
