@@ -4,6 +4,17 @@ These are Ruby programs that solve the math problems from http://projecteuler.ne
 This project was inspired by the Seatle.rb May 2014 Coding Challenge found here, http://www.thagomizer.com/blog/2014/05/06/may-coding-challenge.html
 
 <br>
+####1. Multiples of 3 and 5
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./multiples_of_3_or_5_euler_01.rb
+sum = 233168
+
+real  0m0.192s
+user  0m0.043s
+sys 0m0.014s
+</pre>
+
+
 ####2. Even Fibonacci numbers
 
 <pre>
