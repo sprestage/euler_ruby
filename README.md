@@ -1,6 +1,7 @@
 ##Euler solutions in Ruby
 These are Ruby programs that solve the math problems from http://projecteuler.net/problems.
 
+This project was inspired by the Seatle.rb May 2014 Coding Challenge found here, http://www.thagomizer.com/blog/2014/05/06/may-coding-challenge.html
 
 <br>
 ####2. Even Fibonacci numbers
@@ -112,3 +113,25 @@ user  0m0.043s
 sys 0m0.014s
 </pre>
 
+
+***9. Special Pythagorean triplet
+
+Took me a little time to wrap my head around some of this.  Probably could have done it much faster.  Pre-optimization is the devil.  *sigh*
+
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./special_Pythagorean_triplet_euler_09.rb
+
+  200 + 375 + 425 = 1000
+AND
+  200**2 + 375**2 = 425**2
+AND
+  40000 + 140625 = 180625
+AND
+ 200 < 375 < 425
+
+The product of abc is: 31875000.
+
+real  0m0.148s
+user  0m0.073s
+sys 0m0.011s
+</pre>
