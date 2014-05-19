@@ -125,7 +125,7 @@ sys 0m0.014s
 </pre>
 
 
-***9. Special Pythagorean triplet
+####9. Special Pythagorean triplet
 
 Took me a little time to wrap my head around some of this.  Probably could have done it much faster.  Pre-optimization is the devil.  *sigh*
 
@@ -145,4 +145,17 @@ The product of abc is: 31875000.
 real  0m0.148s
 user  0m0.073s
 sys 0m0.011s
+</pre>
+
+
+####10. Summation of primes
+Used that Sieve of Eratosthenes hash solution from #7 again.
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./summation_of_primes_euler_10.rb
+
+sum of primes less than 2000000: 142913828922
+
+real  0m17.364s
+user  0m5.554s
+sys 0m0.145s
 </pre>
