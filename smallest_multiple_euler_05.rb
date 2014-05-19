@@ -14,14 +14,14 @@ end
 
 def isPrime (number)
   if number == 1
-    return 1
+    return true
   end
   2.upto(number) do |x|
     if (number % x == 0) && (number != x)
-      return 0
+      return false
     end
   end
-  return 1
+  return true
 end
 
 def findFactorFromHash(primes_hash, max)
@@ -42,7 +42,7 @@ primes = Hash.new(0)
 
 # Store all prime factors into a hash.  Key = prime; value = power
 small_divisor.upto(large_divisor) do |x|
-  if isPrime(x) != 0
+  if isPrime(x)
     primes[x] = 1
   else
     2.upto(x) do |y|
