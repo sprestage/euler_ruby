@@ -32,6 +32,7 @@ a[17] = "20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16".split(" ")
 a[18] = "20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54".split(" ").map { |s| s.to_i }
 a[19] = "01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48".split(" ").map { |s| s.to_i }
 
+### Uncomment this to print out the entire grid.
 # 0.upto(19) do |x|
 #   0.upto(19) do |y|
 #     print "#{a[x][y].to_s.rjust(2, '0')} "
