@@ -159,3 +159,15 @@ real  0m17.364s
 user  0m5.554s
 sys 0m0.145s
 </pre>
+
+
+####11. Largest product in a grid
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./largest_product_in_grid_euler_11.rb
+
+biggest product of four = 70600674
+
+real  0m0.153s
+user  0m0.039s
+sys 0m0.012s
+</pre>
