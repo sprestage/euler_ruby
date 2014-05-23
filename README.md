@@ -173,7 +173,7 @@ sys 0m0.012s
 </pre>
 
 
-###13. Large sum
+####13. Large sum
 <pre>
 susanmaclaptop:euler_ruby susan$ time ./large_sum_euler_13.rb
 
@@ -188,7 +188,7 @@ sys 0m0.010s
 </pre>
 
 
-###16. Power digit sum
+####16. Power digit sum
 <pre>
 susanmaclaptop:euler_ruby susan$ time ./power_digit_sum_euler_16.rb
 sum of the digits of x^1000 = 1366
@@ -196,4 +196,18 @@ sum of the digits of x^1000 = 1366
 real  0m0.056s
 user  0m0.040s
 sys 0m0.012s
+</pre>
+
+
+####17. Number letter counts
+This felt more iterative than I would have preferred.  But that may be the nature of the beast.
+
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./number_letter_counts_euler_17.rb
+
+number_letter_count = 21124
+
+real  0m0.190s
+user  0m0.113s
+sys 0m0.016s
 </pre>
