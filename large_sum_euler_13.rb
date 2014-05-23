@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-MAX = 99
+MAX = 100
 
 a = Array.new(MAX)
 count = 0
@@ -16,7 +16,7 @@ File.open("digits_euler_13.txt", "r") do |f|
   end
 end
 
-0.upto(MAX) do |x|
+0.upto(MAX-1) do |x|
   # puts a[x]
   sum = sum + a[x]
 end
