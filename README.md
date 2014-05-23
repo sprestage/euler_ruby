@@ -171,3 +171,18 @@ real  0m0.153s
 user  0m0.039s
 sys 0m0.012s
 </pre>
+
+
+###13. Large sum
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./large_sum_euler_13.rb
+
+full sum = 5537376230390876637302048746832985971773659831892672
+
+first 10 digits of the sum are:
+5537376230
+
+real  0m0.060s
+user  0m0.036s
+sys 0m0.010s
+</pre>
