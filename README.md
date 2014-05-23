@@ -186,3 +186,14 @@ real  0m0.060s
 user  0m0.036s
 sys 0m0.010s
 </pre>
+
+
+###16. Power digit sum
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./power_digit_sum_euler_16.rb
+sum of the digits of x^1000 = 1366
+
+real  0m0.056s
+user  0m0.040s
+sys 0m0.012s
+</pre>
