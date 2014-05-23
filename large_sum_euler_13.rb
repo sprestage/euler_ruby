@@ -7,7 +7,7 @@ count = 0
 sum = 0
 sumString = ""
 
-File.open("digits_euler_13.txt", "r") do |f|
+File.open("large_sum_euler_13.txt", "r") do |f|
   f.each_line do |line|
     line = line.gsub(/\n/,"").to_i
     # puts line
