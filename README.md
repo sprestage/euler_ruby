@@ -188,6 +188,19 @@ sys 0m0.010s
 </pre>
 
 
+####14. Longest Collatz sequence
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./longest_Collatz_sequence_euler_14.rb
+
+longest_chain_length = 525
+longest_source = 837799
+
+real  0m41.295s
+user  0m21.559s
+sys 0m0.081s
+</pre>
+
+
 ####16. Power digit sum
 <pre>
 susanmaclaptop:euler_ruby susan$ time ./power_digit_sum_euler_16.rb
