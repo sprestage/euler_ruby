@@ -4,6 +4,10 @@ require 'minitest/pride'
 require_relative '../multiples_of_3_or_5_euler_01.rb'
 
 describe "sumOfMultiples returns correct answer to Euler #1." do
+  it "passes for sum of all multiples of 3 or 5 below 10, should equal 23." do
+    assert sumOfMultiples(10) == 23
+  end
+
   it "passes for sum of all multiples of 3 or 5 below 1000, should equal 233168." do
     assert sumOfMultiples(1000) == 233168
   end
