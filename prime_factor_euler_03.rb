@@ -1,33 +1,71 @@
 #!/usr/bin/env ruby
+###
+# The prime factors of 13195 are 5, 7, 13 and 29.
+#
+# What is the largest prime factor of the number 600851475143 ?
+###
 
-def findBiggestPrimeFactor (number)
-  number_to_be_factored = number
-  biggest_prime_factor = 1
+DEFAULT_TARGET = 13195
+# DEFAULT_TARGET = 600851475143
 
-  puts
+def isPrime(number)
+  if number == 1
+    return true
+  end
+  2.upto(number) do |x|
+    if (number % x == 0) && (number != x)
+      return false
+    end
+  end
+  return true
+end
 
+def findSmallestFactor(number)
+  2.upto(number) do |x|
+    if number % x == 0
+      return x
+    end
+  end
+  return number  ### Should only happen if prime.
+end
+
+def findBiggestPrimeFactor(number)
   if number == 1
     return 1
   end
 
-  2.upto(number) do |x|
-    if number % x == 0
-      if x > biggest_prime_factor
-        biggest_prime_factor = x
-      end
-      puts "#{x}, where #{number} / #{x} is now #{number/x}"
-      if number == x
-        break
-      else
-        number = number / x
-      end
+  biggest_prime_factor = 1
+  factor = 1
+
+  while !isPrime(number)
+    factor = findSmallestFactor(number)
+    if factor > biggest_prime_factor
+      biggest_prime_factor = factor
     end
+    # puts "#{factor}, where #{number} / #{factor} is now #{number/factor}"
+    number = number/factor
   end
-  puts
-  puts "Biggest prime factor of #{number_to_be_factored} = #{biggest_prime_factor}"
+  if number > biggest_prime_factor
+    biggest_prime_factor = number
+  end
+
+  # puts "Biggest prime factor of #{number} = #{biggest_prime_factor}"
+  return biggest_prime_factor
 end
 
-# factor_this = 13195
-factor_this = 600851475143
 
-findBiggestPrimeFactor(factor_this)
+if ARGV.count > 0
+  factor_this = ARGV[0].to_i
+else
+  factor_this = DEFAULT_TARGET
+end
+
+puts
+biggest_factor = findBiggestPrimeFactor(factor_this)
+puts
+puts "Biggest prime factor of #{factor_this} = #{biggest_factor}"
+
+### TEST
+# Test what prime factors for 24; this tests for multiple of a prime.
+# Test what prime factors for 5; this is a single prime number.
+# Test what prime factors for 13195; this is the example given; should be 5, 7, 13, & 29.
