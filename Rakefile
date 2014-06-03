@@ -19,3 +19,15 @@ task :example do
     ruby f
   end
 end
+
+task :euler1 do
+  ruby "test/euler_02_test.rb"
+end
+
+task :euler2 do
+  ruby "test/euler_02_test.rb"
+end
+
+task :euler3 do
+  ruby "test/euler_02_test.rb"
+end
