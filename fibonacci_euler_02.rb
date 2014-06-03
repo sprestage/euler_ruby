@@ -71,7 +71,6 @@ n = 1
 until the_end > 4_000_000
   the_end = fib(n)
   n += 1
-  puts the_end
 end
 
 the_end = 0
@@ -81,7 +80,6 @@ n = 1
 until the_end > 4_000_000
   the_end = findXthFibonacciNumber(n)
   n += 1
-  puts the_end
 end
 
 puts " = #{fib_sum}"
