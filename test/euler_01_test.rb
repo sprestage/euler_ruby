@@ -1,75 +1,77 @@
-require 'minitest/autorun'
-require 'minitest/spec'
-require 'minitest/pride'
+require_relative './minitest_helper.rb'
 require_relative '../multiples_of_3_or_5_euler_01.rb'
 
-describe "sumOfMultiples returns correct answer to Euler #1." do
-  it "passes for sum of all multiples of 3 or 5 below 10, should equal 23." do
-    assert sumOfMultiples(10) == 23
+class TestDivisibleByThree < MiniTest::Test
+  def test_is_zero_divisible_by_three
+    assert_equal true, isDivisibleByThree(0)
   end
 
-  it "passes for sum of all multiples of 3 or 5 below 1000, should equal 233168." do
-    assert sumOfMultiples(1000) == 233168
+  def test_is_one_divisible_by_three
+    assert_equal true, !isDivisibleByThree(1)
+  end
+
+  def test_is_two_divisible_by_three
+    assert_equal true, !isDivisibleByThree(2)
+  end
+
+  def test_is_three_divisible_by_three
+    assert_equal true, isDivisibleByThree(3)
+  end
+
+  def test_is_five_divisible_by_three
+    assert_equal true, !isDivisibleByThree(5)
+  end
+
+  def test_is_square_of_three_divisible_by_three
+    assert_equal true, isDivisibleByThree(9)
+  end
+
+  def test_is_fifteen_divisible_by_three
+    assert_equal true, isDivisibleByThree(15)
   end
 end
 
-describe "isDivisibleByThree returns correct response" do
-  it "passes for zero" do
-    assert isDivisibleByThree(0) == true
+
+class TestDivisibleByFive < MiniTest::Test
+  def test_is_zero_divisible_by_five
+    assert_equal true, isDivisibleByFive(0)
   end
 
-  it "fails for one" do
-    assert isDivisibleByThree(1) != true
+  def test_is_one_divisible_by_five
+    assert_equal true, !isDivisibleByFive(1)
   end
 
-  it "fails for two" do
-    assert isDivisibleByThree(2) != true
+  def test_is_two_divisible_by_five
+    assert_equal true, !isDivisibleByFive(2)
   end
 
-  it "passes for three" do
-    assert isDivisibleByThree(3) == true
+  def test_is_three_divisible_by_five
+    assert_equal true, !isDivisibleByFive(3)
   end
 
-  it "fails for five" do
-    assert isDivisibleByThree(5) != true
+  def test_is_five_divisible_by_five
+    assert_equal true, isDivisibleByFive(5)
   end
 
-  it "passes for the square of three" do
-    assert isDivisibleByThree(9) == true
+  def test_is_fifteen_divisible_by_five
+    assert_equal true, isDivisibleByFive(15)
   end
 
-  it "passes for fifteen" do
-    assert isDivisibleByThree(15) == true
+  def test_is_square_of_five_divisible_by_five
+    assert_equal true, isDivisibleByFive(25)
   end
 end
 
-describe "isDivisibleByFive returns correct response" do
-  it "passes for zero" do
-    assert isDivisibleByFive(0) == true
+
+class TestSumOfMultiples < MiniTest::Test
+  def test_sum_of_all_multiples_of_3_or_5_below_10
+    assert_equal 23, sumOfMultiples(10)
   end
 
-  it "fails for one" do
-    assert isDivisibleByFive(1) != true
-  end
-
-  it "fails for two" do
-    assert isDivisibleByFive(2) != true
-  end
-
-  it "fails for three" do
-    assert isDivisibleByFive(3) != true
-  end
-
-  it "passes for five" do
-    assert isDivisibleByFive(5) == true
-  end
-
-  it "passes for fifteen" do
-    assert isDivisibleByFive(15) == true
-  end
-
-  it "passes for the square of five" do
-    assert isDivisibleByFive(25) == true
+  def test_sum_of_all_multiples_of_3_or_5_below_10
+    assert_equal 233168, sumOfMultiples(1000)
   end
 end
+
+
 

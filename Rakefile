@@ -21,7 +21,7 @@ task :example do
 end
 
 task :euler1 do
-  ruby "test/euler_02_test.rb"
+  ruby "test/euler_01_test.rb"
 end
 
 task :euler2 do
@@ -29,5 +29,17 @@ task :euler2 do
 end
 
 task :euler3 do
-  ruby "test/euler_02_test.rb"
+  ruby "test/euler_03_test.rb"
+end
+
+task :euler4 do
+  ruby "test/euler_04_test.rb"
+end
+
+task :euler5 do
+  ruby "test/euler_05_test.rb"
+end
+
+task :euler6 do
+  ruby "test/euler_06_test.rb"
 end
