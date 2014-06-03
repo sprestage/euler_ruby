@@ -1,45 +1,46 @@
-require 'minitest/autorun'
-require 'minitest/spec'
-require 'minitest/pride'
+require_relative './minitest_helper.rb'
 require_relative '../prime_factor_euler_03.rb'
 
-describe "findSmallestFactor returns correct response" do
-  it "passes for a prime number" do
-    assert findSmallestFactor(2) == 2
+
+class TestSmallestFactor < MiniTest::Test
+  def test_simple_prime_number
+    assert_equal 2, findSmallestFactor(2)
   end
 
-  it "passes for a non-prime, square number" do
-    assert findSmallestFactor(9) == 3
+  def test_non_prime_simple_square
+    assert_equal 3, findSmallestFactor(9)
   end
 
-  it "passes for a non-prime, square number" do
-    assert findSmallestFactor(18) == 2
+  def test_non_prime_square_with_lesser_factor
+    assert_equal 2, findSmallestFactor(18)
   end
 
-  it "passes for a non-prime, square number" do
-    assert findSmallestFactor(45) == 3
+  def test_non_prime_square_with_greater_factor
+    assert_equal 3, findSmallestFactor(45)
   end
 
-  it "passes for a non-prime, cube number" do
-    assert findSmallestFactor(125) == 5
+  def test_non_prime_simple_cube
+    assert_equal 5, findSmallestFactor(125)
   end
 end
 
-describe "findBiggestPrimeFactor returns correct response" do
-  it "passes for prime number" do
-    assert findBiggestPrimeFactor(5) == 5
+
+class TestBiggestPrimeFactor < MiniTest::Test
+  def test_simple_prime_number
+    assert_equal 5, findBiggestPrimeFactor(5)
   end
 
-  it "passes for non-prime number containing a square" do
-    assert findBiggestPrimeFactor(12) == 3
+  def test_non_prime_number_containing_a_square
+    assert_equal 3, findBiggestPrimeFactor(12)
   end
 
-  it "passes for non-prime number containing a cube" do
-    assert findBiggestPrimeFactor(24) == 3
+  def test_non_prime_number_containing_a_cube
+    assert_equal 3, findBiggestPrimeFactor(24)
   end
 
-  it "passes for the Euler example" do
-    assert findBiggestPrimeFactor(13195) == 29
+  def test_euler_example
+    assert_equal 29, findBiggestPrimeFactor(13195)
   end
 end
+
 
