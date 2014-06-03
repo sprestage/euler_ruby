@@ -68,7 +68,7 @@ class TestSumOfMultiples < MiniTest::Test
     assert_equal 23, sumOfMultiples(10)
   end
 
-  def test_sum_of_all_multiples_of_3_or_5_below_10
+  def test_sum_of_all_multiples_of_3_or_5_below_1000
     assert_equal 233168, sumOfMultiples(1000)
   end
 end
