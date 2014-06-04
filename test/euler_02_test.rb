@@ -55,27 +55,27 @@ class TestFib < MiniTest::Test
 end
 
 class TestSolutions < MiniTest::Test
-  def test_first_solution_with_small_example_answer
+  def test_first_solution_sum_of_even_fib_under_10_small_example
     assert_equal 10, first_find_sum_of_even_fibonacci_terms_under(10)
   end
 
-  def test_second_solution_small_example_euler_answer
+  def test_second_solution_sum_of_even_fib_under_10_small_example
     assert_equal 10, second_find_sum_of_even_fibonacci_terms_under(10)
   end
 
-  def test_third_solution_small_example_euler_answer
+  def test_third_solution_sum_of_even_fib_under_10_small_example
     assert_equal 10, third_find_sum_of_even_fibonacci_terms_under(10)
   end
 
-  def test_first_solution_euler_challenge
+  def test_first_solution_sum_of_even_fib_under_4million_euler_challenge
     assert_equal 4613732, first_find_sum_of_even_fibonacci_terms_under(4_000_000)
   end
 
-  def test_second_solution_euler_challenge
+  def test_second_solution_sum_of_even_fib_under_4million_euler_challenge
     assert_equal 4613732, second_find_sum_of_even_fibonacci_terms_under(4_000_000)
   end
 
-  def test_third_solution_euler_challenge
+  def test_third_solution_sum_of_even_fib_under_4million_euler_challenge
     assert_equal 4613732, third_find_sum_of_even_fibonacci_terms_under(4_000_000)
   end
 end
