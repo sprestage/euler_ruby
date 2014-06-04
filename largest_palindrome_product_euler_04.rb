@@ -1,4 +1,12 @@
 #!/usr/bin/env ruby
+###
+# Largest palindrome product
+# Problem 4
+###
+# A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+
+# Find the largest palindrome made from the product of two 3-digit numbers.
+###
 
 smallest_three_digit = 100
 largest_three_digit = 999
@@ -7,7 +15,7 @@ largest_palindrome_product = 0
 first_digit_from_largest_product = 0
 second_digit_from_largest_product = 0
 
-def isPalindrome(number)
+def is_palindrome(number)
   palindrome_string = number.to_s
   palindrome_array = palindrome_string.split("")
   palindrome_midpoint = ((palindrome_string.length) - 1) / 2
@@ -31,7 +39,7 @@ end
 largest_three_digit.downto(smallest_three_digit) do |x|
   x.downto(smallest_three_digit) do |y|
     product = x*y
-    if isPalindrome(product) == true
+    if is_palindrome(product) == true
       if product > largest_palindrome_product
         largest_palindrome_product = product
         first_digit_from_largest_product = x
