@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-def findPower (number, power)
+def find_power (number, power)
   @result = 1
   return number if (number == 0) || (number == 1)
   return 1 if power == 0
@@ -12,7 +12,7 @@ def findPower (number, power)
   return @result
 end
 
-def isPrime (number)
+def is_prime (number)
   if number == 1
     return true
   end
@@ -24,11 +24,11 @@ def isPrime (number)
   return true
 end
 
-def findFactorFromHash(primes_hash, max)
+def find_factor_from_hash(primes_hash, max)
   @multiple = 1
   2.upto(max) do |x|
     power = primes_hash[x]
-    @multiple = @multiple * findPower(x, power)
+    @multiple = @multiple * find_power(x, power)
   end
   return @multiple
 end
@@ -42,7 +42,7 @@ primes = Hash.new(0)
 
 # Store all prime factors into a hash.  Key = prime; value = power
 small_divisor.upto(large_divisor) do |x|
-  if isPrime(x)
+  if is_prime(x)
     primes[x] = 1
   else
     2.upto(x) do |y|
@@ -59,7 +59,7 @@ small_divisor.upto(large_divisor) do |x|
 end
 
 # Use the stored hash of prime factors and their powers to calculate the multiple.
-smallest_multiple = findFactorFromHash(primes, large_divisor)
+smallest_multiple = find_factor_from_hash(primes, large_divisor)
 
 puts smallest_multiple
 

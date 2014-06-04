@@ -1,22 +1,22 @@
 #!/usr/bin/env ruby
 
-def nextEven(number)
+def next_even(number)
   return number/2
 end
 
-def nextOdd(number)
+def next_odd(number)
   return ((3*number) + 1)
 end
 
-def findChainAndLength(starting_number)
+def find_chain_and_length(starting_number)
   # puts
   # print "#{starting_number}"
   chain_length = 1
   while starting_number != 1
     if starting_number % 2 == 0
-      starting_number = nextEven(starting_number)
+      starting_number = next_even(starting_number)
     else
-      starting_number = nextOdd(starting_number)
+      starting_number = next_odd(starting_number)
     end
     # print " -> #{starting_number}"
     chain_length = chain_length + 1
@@ -33,7 +33,7 @@ length = 0
 longest_source = 0
 
 1.upto(max_starting_number-1) do |x|
-  length = findChainAndLength(x)
+  length = find_chain_and_length(x)
   if longest_chain_length < length
     longest_chain_length = length
     longest_source = x

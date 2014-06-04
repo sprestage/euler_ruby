@@ -3,7 +3,7 @@
 target = 1000
 number_letter_count = 0
 
-def printNumber(number, prefix="")
+def print_number(number, prefix="")
   number_spellings = Hash.new
   spelling_counts = Hash.new
 
@@ -79,36 +79,36 @@ number_string = ""
 
 if target < 100
   1.upto(target) do |x|
-    number_letter_count = number_letter_count + printNumber(x)
+    number_letter_count = number_letter_count + print_number(x)
   end
 end
 
 if target > 99
   1.upto(99) do |x|
-    number_letter_count = number_letter_count + printNumber(x)
+    number_letter_count = number_letter_count + print_number(x)
   end
 end
 
 if target > 99
   1.upto((target/100) - 1) do |y|
-    number_letter_count = number_letter_count + printNumber(100,y)
+    number_letter_count = number_letter_count + print_number(100,y)
     1.upto(99) do |z|
-      number_letter_count = number_letter_count + printNumber(100, y)
+      number_letter_count = number_letter_count + print_number(100, y)
       number_letter_count = number_letter_count + 3  #account for 'and'
-      number_letter_count = number_letter_count + printNumber(z)
+      number_letter_count = number_letter_count + print_number(z)
     end
   end
 
   if target % 1000 == 0
-    number_letter_count = number_letter_count + printNumber(1000,target/1000)
+    number_letter_count = number_letter_count + print_number(1000,target/1000)
   else
-    number_letter_count = number_letter_count + printNumber(100,target/100)
+    number_letter_count = number_letter_count + print_number(100,target/100)
   end
 
   1.upto(target%100) do |x|
-    number_letter_count = number_letter_count + printNumber(100, target/100)
+    number_letter_count = number_letter_count + print_number(100, target/100)
     number_letter_count = number_letter_count + 3 unless target % 100 == 0  #account for 'and'
-    number_letter_count = number_letter_count + printNumber(x)
+    number_letter_count = number_letter_count + print_number(x)
   end
 end
 

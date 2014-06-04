@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-def isPrime (number)
+def is_prime (number)
   if number == 1
     return true
   end
@@ -38,7 +38,7 @@ end
 end
 # Store zeros for the multiples of the prime values.
 3.step(root_target,2) do |x|
-  if isPrime(x)
+  if is_prime(x)
     max = target/x
     2.upto(max) do |y|
       primes[x*y] = 0
