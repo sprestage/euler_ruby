@@ -10,18 +10,18 @@ second_digit_from_largest_product = 0
 def isPalindrome(number)
   palindrome_string = number.to_s
   palindrome_array = palindrome_string.split("")
-  palindrome_length = (palindrome_string.length) - 1
+  palindrome_midpoint = ((palindrome_string.length) - 1) / 2
 
-  if palindrome_length == 0
-    return 0
+  if palindrome_string.length <= 1
+    return true
   end
 
-  still_palindrome = 1
+  still_palindrome = true
 
-  0.upto(palindrome_length / 2) do |x|
-    y = palindrome_length - x
+  0.upto(palindrome_midpoint) do |x|
+    y = palindrome_string.length - x - 1
     if palindrome_array[x] != palindrome_array[y]
-      still_palindrome = 0
+      still_palindrome = false
     end
   end
 
@@ -31,7 +31,7 @@ end
 largest_three_digit.downto(smallest_three_digit) do |x|
   x.downto(smallest_three_digit) do |y|
     product = x*y
-    if isPalindrome(product) == 1
+    if isPalindrome(product) == true
       if product > largest_palindrome_product
         largest_palindrome_product = product
         first_digit_from_largest_product = x
