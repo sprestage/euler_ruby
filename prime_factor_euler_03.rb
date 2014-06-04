@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 ###
+# Largest prime factor
+# Problem 3
+###
 # The prime factors of 13195 are 5, 7, 13 and 29.
 #
 # What is the largest prime factor of the number 600851475143 ?
@@ -8,7 +11,7 @@
 DEFAULT_TARGET = 13195
 # DEFAULT_TARGET = 600851475143
 
-def isPrime(number)
+def is_prime(number)
   if number == 1
     return true
   end
@@ -20,7 +23,7 @@ def isPrime(number)
   return true
 end
 
-def findSmallestFactor(number)
+def find_smallest_factor(number)
   2.upto(number) do |x|
     if number % x == 0
       return x
@@ -29,7 +32,7 @@ def findSmallestFactor(number)
   return number  ### Should only happen if prime.
 end
 
-def findBiggestPrimeFactor(number)
+def find_biggest_prime_factor(number)
   if number == 1
     return 1
   end
@@ -37,8 +40,8 @@ def findBiggestPrimeFactor(number)
   biggest_prime_factor = 1
   factor = 1
 
-  while !isPrime(number)
-    factor = findSmallestFactor(number)
+  while !is_prime(number)
+    factor = find_smallest_factor(number)
     if factor > biggest_prime_factor
       biggest_prime_factor = factor
     end
@@ -61,7 +64,7 @@ else
 end
 
 puts
-biggest_factor = findBiggestPrimeFactor(factor_this)
+biggest_factor = find_biggest_prime_factor(factor_this)
 puts
 puts "Biggest prime factor of #{factor_this} = #{biggest_factor}"
 
