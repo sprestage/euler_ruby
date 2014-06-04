@@ -64,11 +64,11 @@ end
 
 
 class TestSumOfMultiples < MiniTest::Test
-  def test_sum_of_all_multiples_of_3_or_5_below_10
+  def test_sum_of_all_multiples_of_3_or_5_below_10_euler_example
     assert_equal 23, sumOfMultiples(10)
   end
 
-  def test_sum_of_all_multiples_of_3_or_5_below_1000
+  def test_sum_of_all_multiples_of_3_or_5_below_1000_euler_challenge
     assert_equal 233168, sumOfMultiples(1000)
   end
 end
