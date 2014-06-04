@@ -41,6 +41,10 @@ class TestBiggestPrimeFactor < MiniTest::Test
   def test_euler_example
     assert_equal 29, findBiggestPrimeFactor(13195)
   end
+
+  def test_euler_challenge
+    assert_equal 6857, findBiggestPrimeFactor(600851475143)
+  end
 end
 
 
