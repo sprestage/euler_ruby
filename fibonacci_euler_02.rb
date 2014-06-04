@@ -8,7 +8,15 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed
 # four million, find the sum of the even-valued terms.
 #
+# NOTES: Mathematically, the Fibonacci sequence is defined as 0, 1, 1, 2, 3, 5, ...
+# I've implemented my find fibonacci methods accordingly.  This means however,
+# that it must be taken into account that the Euler Problem is defined to begin
+# at the second Fibonacci term, where fib(0)=0 and fib(1)=1.
+#
 ###
+
+TARGET = 4_000_000
+SMALL_TARGET = 10
 
 ### Very concise recursive fibonacci method.  Consider revising to use this.
 # Credit for this solution goes to Aja Hammerly's "A World Without Assignment"
@@ -26,7 +34,7 @@ def fib(n)
   end
 end
 
-def findXthFibonacciNumber(xth_term)
+def find_xth_fibonacci_number(xth_term)
   if xth_term == 0
     return 0
   end
@@ -47,39 +55,65 @@ def findXthFibonacciNumber(xth_term)
   return fib_n
 end
 
-fib_sum = 0
-fib_n_minus_two = 1
-fib_n_minus_one = 1
-fib_n = 0
+### First solution is the quickest.
+def first_find_sum_of_even_fibonacci_terms_under(max)
+  fib_sum = 0
+  fib_n_minus_two = 1
+  fib_n_minus_one = 1
+  fib_n = 0
+
+  until fib_n > max
+    fib_n = fib_n_minus_one + fib_n_minus_two
+    fib_n_minus_two = fib_n_minus_one
+    fib_n_minus_one = fib_n
+    if fib_n_minus_two % 2 == 0
+      fib_sum += fib_n_minus_two
+    end
+  end
+
+  return fib_sum
+end
 
 puts
-
-### First solution is the quickest.
-until fib_n > 4_000_000
-  fib_n = fib_n_minus_one + fib_n_minus_two
-  fib_n_minus_two = fib_n_minus_one
-  fib_n_minus_one = fib_n
-  if fib_n_minus_two % 2 == 0
-    fib_sum += fib_n_minus_two
-  end
-end
-
-the_end = 0
-n = 1
+print "1st solution, Sum of even Fibonacci terms under #{TARGET} = "
+puts first_find_sum_of_even_fibonacci_terms_under(TARGET)
 
 ### Second solution is very slow.
-until the_end > 4_000_000
-  the_end = fib(n)
-  n += 1
+def second_find_sum_of_even_fibonacci_terms_under(max)
+  the_end = 0
+  n = 1
+  fib_sum = 0
+  while the_end < max
+    if the_end % 2 == 0
+      fib_sum += the_end
+    end
+    n += 1
+    the_end = fib(n)
+  end
+  return fib_sum
 end
 
-the_end = 0
-n = 1
+puts
+print "2nd solution, Sum of even Fibonacci terms under #{TARGET} = "
+puts second_find_sum_of_even_fibonacci_terms_under(TARGET)
 
 ### Third solution is also pretty quick.
-until the_end > 4_000_000
-  the_end = findXthFibonacciNumber(n)
-  n += 1
+def third_find_sum_of_even_fibonacci_terms_under(max)
+  the_end = 0
+  n = 1
+  fib_sum = 0
+  while the_end < max
+    if the_end % 2 == 0
+      fib_sum += the_end
+    end
+    n += 1
+    the_end = find_xth_fibonacci_number(n)
+  end
+  return fib_sum
 end
 
-puts " = #{fib_sum}"
+puts
+print "3rd solution, Sum of even Fibonacci terms under #{TARGET} = "
+puts third_find_sum_of_even_fibonacci_terms_under(TARGET)
+puts
+
