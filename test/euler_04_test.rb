@@ -39,6 +39,7 @@ class TestPalindrome < MiniTest::Test
   end
 end
 
+
 class TestPalindromeProduct < MiniTest::Test
   def test_euler_example
     assert_equal 9009, find_largest_palindrome_made_from_product_of_two_X_digit_nums(2)
