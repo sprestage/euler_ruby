@@ -47,3 +47,7 @@ end
 task :euler19 do
   ruby "test/euler_19_test.rb"
 end
+
+task :euler20 do
+  ruby "test/euler_20_test.rb"
+end
