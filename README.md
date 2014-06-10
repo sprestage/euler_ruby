@@ -224,3 +224,17 @@ real  0m0.190s
 user  0m0.113s
 sys 0m0.016s
 </pre>
+
+
+####19. Counting Sundays
+
+<pre>
+susanmaclaptop:euler_ruby susan$ time ./counting_sundays_euler_19.rb
+
+There are 171 Sundays that fall on the first of the month.
+
+
+real  0m1.123s
+user  0m0.081s
+sys 0m0.022s
+</pre>
