@@ -43,3 +43,7 @@ end
 task :euler6 do
   ruby "test/euler_06_test.rb"
 end
+
+task :euler19 do
+  ruby "test/euler_19_test.rb"
+end
