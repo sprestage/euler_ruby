@@ -1,5 +1,9 @@
 require_relative './minitest_helper.rb'
 require_relative '../sum_square_difference_euler_06.rb'
+###
+# This Euler solution is too simple to test further.  Just
+#  testing against the example and challenge answers
+###
 
 class TestFindDifBetwSquareOfSumsAndSumOfSquares < MiniTest::Test
   def test_euler_example
