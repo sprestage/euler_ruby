@@ -92,11 +92,14 @@ The much more efficient solution uses the Sieve of Eratosthenes (ca 240 BC), whi
 <pre>
 susanmaclaptop:euler_ruby susan$ time ./10001st_prime_euler_07.rb
 
-The 10001st prime number is 104743
+The 6'th prime number is 13.
 
-real  0m3.323s
-user  0m0.539s
-sys 0m0.065s
+The 10001'th prime number is 104743.
+
+
+real  0m0.494s
+user  0m0.457s
+sys 0m0.020s
 </pre>
 
 The first solution takes about 5-6 minutes.  Optimization is needed, such as a non-iterative way of checking for primes.  Time to learn more math.
