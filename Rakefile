@@ -44,6 +44,18 @@ task :euler6 do
   ruby "test/euler_06_test.rb"
 end
 
+task :euler7 do
+  ruby "test/euler_07_test.rb"
+end
+
+task :euler8 do
+  ruby "test/euler_08_test.rb"
+end
+
+task :euler9 do
+  ruby "test/euler_09_test.rb"
+end
+
 task :euler19 do
   ruby "test/euler_19_test.rb"
 end
