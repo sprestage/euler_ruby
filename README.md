@@ -115,7 +115,27 @@ sys 0m0.761s
 
 ####8. Largest product in a series
 
-This was also very straightforward.
+This was also very straightforward.  <- original comment
+
+Further investigations:
+Refactoring turned up some problems.  The following is copied from
+comments in my code:
+
+I do not see how this could work, as the specs say "find the thirteen
+ adjacent digits" and this program only appears to find the 5 adjacent
+ digits.  I'm awfully sure that the Euler Project site said my answer
+ was correct, so I'm reluctant to change this solution until the Euler
+ site comes back.  I may give it a try anyway, and keep the solution
+ in comments for my own satisfaction.  Here is hoping the Euler site
+ can recover and again provide the delightful opportunity for learning
+ that it has provided in the past.  June 22, 2014   -sprestage
+
+Ok, new solution implemented and code refactored into methods.  The example
+ answer tests out successfully, but I am unable to check the challenge answer.
+ my code returns a highest product of 23514624000, but my README shows the
+ correct answer was 40824 when I originally solved this and submitted the
+ answer to projecteuler.net.  This is the best I can to for a solution,
+ unless or until the Euler Project site returns.  June 23, 2014  -sprestage
 
 <pre>
 susanmaclaptop:euler_ruby susan$ time ./largest_product_in_series_euler_08.rb
