@@ -132,6 +132,8 @@ sys 0m0.014s
 
 Took me a little time to wrap my head around some of this.  Probably could have done it much faster.  Pre-optimization is the devil.  *sigh*
 
+Later refactoring of this solution to put it into a method turned up some serious cool for me.  I realized that this method was going to need to be tucked inside a class, since I needed to access several pieces of data from within the Pythagorean triplet.  Most importantly, that a, b, & c.  But also, while I was at it, I made it easy to check the sum and product as well.  This was the first refactoring that really called for a class and not just a free standing method, which I found all sorts of interesting in my Ruby and OOP learning process.  -sprestage 6/23/14
+
 <pre>
 susanmaclaptop:euler_ruby susan$ time ./special_Pythagorean_triplet_euler_09.rb
 
