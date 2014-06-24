@@ -26,7 +26,7 @@ def is_prime(number)
   return true
 end
 
-def set_up_seive_of_eratosthenes(eratos_hash, size)
+def set_up_sieve_of_eratosthenes(eratos_hash, size)
   @n = size
   @root_n = Math.sqrt(@n).to_i
 
@@ -63,7 +63,7 @@ end
 # primes = Hash.new
 # final = 0
 
-# primes = set_up_seive_of_eratosthenes(primes, n)
+# primes = set_up_sieve_of_eratosthenes(primes, n)
 
 def count_primes(primes_hash, hash_size)
   # @size = primes_hash.size
@@ -88,7 +88,7 @@ def find_prime(number)
   @hash = Hash.new(0)
 
   until @count > number
-    @hash = set_up_seive_of_eratosthenes(@hash, @hash_size)
+    @hash = set_up_sieve_of_eratosthenes(@hash, @hash_size)
     @count = count_primes(@hash, @hash_size)
     @hash_size = 2 * @hash_size
   end
