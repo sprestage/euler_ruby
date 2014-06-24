@@ -54,17 +54,6 @@ def set_up_sieve_of_eratosthenes(eratos_hash, size)
   return eratos_hash
 end
 
-# # Find first 10_001 primes.
-# goal = 10_001
-# # Try all integers up to 200_000.
-# n = 200_000
-
-# # Set up a hash to use to find primes using the Sieve of Eratosthenes.
-# primes = Hash.new
-# final = 0
-
-# primes = set_up_sieve_of_eratosthenes(primes, n)
-
 def count_primes(primes_hash, hash_size)
   # @size = primes_hash.size
   @size = hash_size
