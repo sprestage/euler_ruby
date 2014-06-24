@@ -56,6 +56,10 @@ task :euler9 do
   ruby "test/euler_09_test.rb"
 end
 
+task :euler10 do
+  ruby "test/euler_10_test.rb"
+end
+
 task :euler19 do
   ruby "test/euler_19_test.rb"
 end
