@@ -3,6 +3,15 @@ These are Ruby programs that solve the math problems from http://projecteuler.ne
 
 This project was inspired by the Seatle.rb May 2014 Coding Challenge found here, http://www.thagomizer.com/blog/2014/05/06/may-coding-challenge.html
 
+##Run rake tests
+To run the rake test tasks, use the following syntax
+<pre>
+  $ rake euler20
+</pre>
+
+##Euler problems and times
+See comments at the top of each solution .rb file for the each problem description.
+
 <br>
 ####1. Multiples of 3 and 5
 <pre>
@@ -277,4 +286,19 @@ susanmaclaptop:euler_ruby susan$ time ./factorial_digit_sum_euler_20.rb
 real  0m0.265s
 user  0m0.044s
 sys 0m0.014s
+</pre>
+
+
+####21. Amicable numbers
+<pre>
+</pre>
+
+
+####22. Names scores
+<pre>
+</pre>
+
+
+####23. Non-abundant sums
+<pre>
 </pre>
