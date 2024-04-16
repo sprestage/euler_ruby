@@ -4,7 +4,7 @@ GEM
     minitest (5.3.4)
     minitest-rg (5.1.0)
       minitest (~> 5.0)
-    rake (10.3.2)
+    rake (12.3.3)
 
 PLATFORMS
   ruby
